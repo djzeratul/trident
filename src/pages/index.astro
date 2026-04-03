@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { artists } from '../data/site';
+---
+<BaseLayout title="TRIDENT — Leviathan publishing layer" description="Artist landing pages and discography navigation for mymusic.club.">
+  <main class="page-shell home-page">
+    <section class="intro glass-panel">
+      <div>
+        <div class="section-label">Leviathan / TRIDENT</div>
+        <h1>Artist pages that feel like they belong.</h1>
+        <p>
+          TRIDENT is the front-of-house publishing layer for Leviathan: a static Astro site that gives
+          artists, releases, and future discography pages a proper home under <code>mymusic.club</code>.
+        </p>
+      </div>
+    </section>
+
+    <section class="artist-listing">
+      <div class="section-label">Artists</div>
+      <div class="wave-divider"></div>
+      <div class="artist-grid">
+        {artists.map((artist) => (
+          <a class="artist-card glass-panel" href={`/artists/${artist.slug}/`}>
+            <img src={artist.heroImage} alt={`${artist.name} artwork`} loading="lazy" />
+            <div class="artist-card-copy">
+              <h2>{artist.name}</h2>
+              <p>{artist.tagline}</p>
+              <span>Open artist page</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .home-page {
+    padding: 1rem 0 3rem;
+  }
+
+  .intro {
+    padding: 1.25rem 1.3rem;
+    border-radius: var(--radius-xl);
+  }
+
+  h1 {
+    margin: 0.75rem 0 0;
+    font-size: clamp(2rem, 1.7rem + 1.8vw, 3.5rem);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+  }
+
+  .intro p {
+    margin: 1rem 0 0;
+    max-width: 52rem;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .intro code {
+    font-family: inherit;
+    color: var(--text);
+  }
+
+  .artist-listing {
+    margin-top: 1.75rem;
+  }
+
+  .artist-grid {
+    margin-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .artist-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+    transition: transform 160ms ease, border-color 160ms ease;
+  }
+
+  .artist-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(105, 210, 255, 0.24);
+  }
+
+  .artist-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .artist-card-copy {
+    align-self: center;
+  }
+
+  .artist-card-copy h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .artist-card-copy p {
+    margin: 0.55rem 0 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .artist-card-copy span {
+    display: inline-block;
+    margin-top: 0.85rem;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  @media (max-width: 860px) {
+    .artist-grid,
+    .artist-card {
+      grid-template-columns: 1fr;
+    }
+
+    .artist-card img {
+      width: min(100%, 320px);
+      justify-self: center;
+    }
+  }
+</style>

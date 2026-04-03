@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-label="Analog Tide Dreams placeholder cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07131a"/>
+      <stop offset="100%" stop-color="#112d38"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#73d7d1" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#73d7d1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="600" cy="520" r="360" fill="url(#glow)"/>
+  <g fill="none" stroke="#8ce6e1" stroke-opacity="0.45">
+    <path d="M120 690c80-50 160-50 240 0s160 50 240 0 160-50 240 0 160 50 240 0" stroke-width="5"/>
+    <path d="M120 740c80-50 160-50 240 0s160 50 240 0 160-50 240 0 160 50 240 0" stroke-width="3"/>
+    <path d="M120 790c80-50 160-50 240 0s160 50 240 0 160-50 240 0 160 50 240 0" stroke-width="2"/>
+  </g>
+  <circle cx="600" cy="520" r="280" fill="none" stroke="#d9fffd" stroke-opacity="0.12" stroke-width="28"/>
+  <text x="600" y="980" fill="#eefcfb" font-size="92" font-family="Inter, Arial, sans-serif" font-weight="700" letter-spacing="3" text-anchor="middle">ANALOG TIDE DREAMS</text>
+</svg>

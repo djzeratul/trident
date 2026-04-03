@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArtistHero from '../../components/ArtistHero.astro';
+import DiscographyGrid from '../../components/DiscographyGrid.astro';
+import { artists, getArtistBySlug } from '../../data/site';
+
+export function getStaticPaths() {
+  return artists.map((artist) => ({
+    params: { slug: artist.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const artist = getArtistBySlug(slug!);
+
+if (!artist) {
+  return Astro.redirect('/');
+}
+---
+<BaseLayout title={`${artist.name} — TRIDENT`} description={artist.tagline}>
+  <main class="page-shell artist-page">
+    <ArtistHero artist={artist} />
+    <DiscographyGrid artist={artist} />
+  </main>
+</BaseLayout>
+
+<style>
+  .artist-page {
+    padding: 1rem 0 3rem;
+  }
+</style>
