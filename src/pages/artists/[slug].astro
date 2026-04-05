@@ -17,7 +17,7 @@ if (!artist) {
   return Astro.redirect('/');
 }
 ---
-<BaseLayout title={`${artist.name} — TRIDENT`} description={artist.tagline}>
+<BaseLayout title={`${artist.name} — mymusic.club`} description={artist.tagline}>
   <main class="page-shell artist-page">
     <ArtistHero artist={artist} />
     <DiscographyGrid artist={artist} />

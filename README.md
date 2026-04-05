@@ -106,16 +106,16 @@ TRIDENT will automatically generate a new page for any artist in that array beca
 Current image locations:
 
 ```text
-public/images/artists/
-public/images/albums/
+public../images/artists/
+public../images/albums/
 ```
 
 Recommended filenames for the current scaffold:
 
 ```text
-public/images/artists/signal-theory-project.svg
-public/images/albums/analog-tide-dreams.svg
-public/images/albums/she-learned-my-name.png
+public../images/artists/signal-theory-project.svg
+public../images/albums/analog-tide-dreams.svg
+public../images/albums/she-learned-my-name.png
 ```
 
 The `she-learned-my-name.png` file is already included in this scaffold. Replace the SVG placeholders whenever you're ready.
