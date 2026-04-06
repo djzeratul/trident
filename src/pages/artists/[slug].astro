@@ -2,7 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArtistHero from '../../components/ArtistHero.astro';
 import DiscographyGrid from '../../components/DiscographyGrid.astro';
+import RelatedArtists from '../../components/RelatedArtists.astro';
 import { artists, getArtistBySlug } from '../../data/site';
+import { getRelatedArtists } from '../../lib/recommendations';
 
 export function getStaticPaths() {
   return artists.map((artist) => ({
@@ -12,6 +14,7 @@ export function getStaticPaths() {
 
 const { slug } = Astro.params;
 const artist = getArtistBySlug(slug!);
+const relatedArtists = getRelatedArtists(artist, artists, 3);
 
 if (!artist) {
   return Astro.redirect('/');
@@ -21,6 +24,7 @@ if (!artist) {
   <main class="page-shell artist-page">
     <ArtistHero artist={artist} />
     <DiscographyGrid artist={artist} />
+    <RelatedArtists artists={relatedArtists} />
   </main>
 </BaseLayout>
 
