@@ -101,7 +101,7 @@ export const artists: Artist[] = [
   {
     slug: 'coven-of-quiet-fire',
     name: 'Coven of Quiet Fire',
-    genres: ["industrial metal", "industrial rock", "darkwave", "electronic"],
+    genres: ["industrial metal", "industrial rock", "darkwave", "electronic", electronic-rock],
     vibes: ["ritual", "mechanical", "apocalyptic", "ceremonial", "dark", "militant", "synthetic"],
     tagline: 'Coven of Quiet Fire is not a band so much as a transmission—an evolving body of work built from distortion, ritual, and fractured identity.',
     bio:
