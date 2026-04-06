@@ -54,7 +54,7 @@ export const artists: Artist[] = [
   {
     slug: 'signal-theory-project',
     name: 'Signal Theory Project',
-    genres: ["alternative rock", "post-grunge", "indie rock", "electronic rock"],
+    genres: ["alternative rock", "post-grunge", "indie rock", "electronic-rock"],
     vibes: ["analog", "signal-noise", "melancholic", "introspective", "warm-static", "late-90s"],
     tagline: 'Synthetic memory. Broken trust. Signal-born stories.',
     bio:
