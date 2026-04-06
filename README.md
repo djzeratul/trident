@@ -19,7 +19,7 @@ Current scaffold includes:
 
 ## Requirements
 
-Astro's official docs show the recommended project bootstrap command as `npm create astro@latest`, and the usual local workflow uses `npm run dev` and `npm run build`. Astro v6 also drops Node 18 and 20 support, so use Node 22+ for this project. citeturn660692search0turn660692search1turn660692search2
+Astro's official docs show the recommended project bootstrap command as `npm create astro@latest`, and the usual local workflow uses `npm run dev` and `npm run build`. Astro v6 also drops Node 18 and 20 support, so use Node 22+ for this project.
 
 ## Quick start
 
@@ -157,13 +157,3 @@ rsync -av --delete dist/ /var/www/trident/dist/
 ```
 
 Then reload nginx.
-
-## Good next steps
-
-- replace placeholder art with final covers
-- add release dates and track counts
-- add album detail pages later if you want lyrics, credits, or notes
-- add a shared site nav once you have more than one artist
-- add sitemap generation if you want search-friendly indexing later
-
-Astro has an official sitemap integration available if you decide to add that next. citeturn660692search8
